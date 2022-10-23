@@ -1,0 +1,9 @@
+.albumBlock{
+    background-color: blue;
+    display: flex;
+    width: 150px;
+    flex-wrap: wrap;
+}
+a h1{
+    color: red;
+}

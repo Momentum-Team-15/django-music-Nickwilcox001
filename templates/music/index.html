@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block content %}
+<h2 class="title">Django Albums by: Nick</h2>
+<a href="{% url 'create_album' %}">Add Album</a>
+{% for album in albums %}
+<div class="albumBlock">
+    <td>
+        <h2>{{ album.title }}</h2>
+        <h3>{{ album.artist }}</h3>
+        <h3>{{ album.created_at }}</h3>
+        <small>
+            <a href="{% url 'edit_album' album.id %}" class="btn btn-outline-secondary btn-sm">Edit</a>
+            <a href="{% url 'delete_album' album.id %}" class="btn btn-outline-danger btn-sm">Delete</a>
+        </small>
+    </td>
+    </body>
+</div>
+{% endfor %}
+{% endblock %}
